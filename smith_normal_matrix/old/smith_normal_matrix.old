@@ -52,25 +52,25 @@ struct Index
 class SmithNormalMatrix: public Matrix
 {
 private:
-    std::stack <Matrix> row_ops;
-    std::stack <Matrix> column_ops;
-    bool algorithm_done = false;
+    //std::stack <Matrix> row_ops;
+    //std::stack <Matrix> column_ops;
+    //bool algorithm_done = false;
 
 public:
-    SmithNormalMatrix(const std::string& filename);
-    void algorithm(void);
-    void improve_pivot_down(size_t i);
-    void improve_pivot_right(size_t i);
-    void refine_row(size_t r1, size_t r2);
-    void refine_column(size_t c1, size_t c2);
-    void pivot_into_place(size_t r, size_t c, size_t t);
-    Index find_pivot(size_t index);
-    bool pivot_zeroed(size_t pivot);
-    bool zeroes_below_pivot(size_t pivot);
-    bool zeroes_rightof_pivot(size_t pivot);
-    Matrix U(void);
-    Matrix V(void);
-    void save_matrices(const std::string filestem);
+    //SmithNormalMatrix(const std::string& filename);
+    //void algorithm(void);
+    //void improve_pivot_down(size_t i);
+    //void improve_pivot_right(size_t i);
+    //void refine_row(size_t r1, size_t r2);
+    //void refine_column(size_t c1, size_t c2);
+    //void pivot_into_place(size_t r, size_t c, size_t t);
+    //Index find_pivot(size_t index);
+    //bool pivot_zeroed(size_t pivot);
+    //bool zeroes_below_pivot(size_t pivot);
+    //bool zeroes_rightof_pivot(size_t pivot);
+    //Matrix U(void);
+    //Matrix V(void);
+    //void save_matrices(const std::string filestem);
 } ;
 
 SmithNormalMatrix::SmithNormalMatrix(const std::string& filename) : Matrix(filename){/* Do nothing */}

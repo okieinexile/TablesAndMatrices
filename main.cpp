@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 
-#include"matrix/matrix.h"
+#include"smith_normal_matrix/smith_normal_matrix.h"
 #include <string>
 
 int main(int argc, char** argv) 
@@ -9,17 +9,12 @@ int main(int argc, char** argv)
   int s = 5;
   try
   {
-    Matrix t(5,12);
-    t.set_entry(7,0, 5);
-    Matrix R = t.right_identity();
-    Matrix L = t.left_identity();
-    std::cout << L << std::endl;
+    SmithNormalMatrix t("paper_test.csv");
+    SmithNormalMatrix s(t.transpose());
+    std::cout << s << std::endl;
+    t.algorithm();
     std::cout << t << std::endl;
-    std::cout << R << std::endl;    
-    Matrix M = L.multiply(t);
-    Matrix N = t * R;
-    std::cout << M << std::endl;
-    std::cout << N << std::endl;
+    t.save_matrices("pt_matrix");
     return 0;
   }
   catch(const char* e)
