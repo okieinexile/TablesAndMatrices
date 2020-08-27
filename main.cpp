@@ -1,20 +1,16 @@
 #include <iostream>
 #include <assert.h>
 
-#include"smith_normal_matrix/smith_normal_matrix.h"
+#include"prime_list/prime_list.h"
 #include <string>
 
 int main(int argc, char** argv) 
 {
-  int s = 5;
+  int ub = 100;
   try
   {
-    SmithNormalMatrix t("paper_test.csv");
-    SmithNormalMatrix s(t.transpose());
-    std::cout << s << std::endl;
-    t.algorithm();
-    std::cout << t << std::endl;
-    t.save_matrices("pt_matrix");
+    PrimeList t(ub);
+    std::cout << t[52] << std::endl;
     return 0;
   }
   catch(const char* e)
