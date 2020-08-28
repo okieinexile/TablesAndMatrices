@@ -1,16 +1,16 @@
 #include <iostream>
 #include <assert.h>
 
-#include"prime_list/prime_list.h"
+#include"factors/factors.h"
 #include <string>
 
 int main(int argc, char** argv) 
 {
-  int ub = 100;
+  int ub = 9999;
   try
   {
-    PrimeList t(ub);
-    std::cout << t[52] << std::endl;
+    Factors f(ub);
+    std::cout << f << std::endl;
     return 0;
   }
   catch(const char* e)
